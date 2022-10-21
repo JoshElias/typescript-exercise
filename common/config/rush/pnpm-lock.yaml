@@ -1,0 +1,15 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@rush-temp/fetchjson': file:./projects/fetchjson.tgz
+
+dependencies:
+  '@rush-temp/fetchjson': file:projects/fetchjson.tgz
+
+packages:
+
+  file:projects/fetchjson.tgz:
+    resolution: {integrity: sha512-WyiZEwTm9HbVuDKmpBmUid9Ae/5NvqTFAhfKY+HKlhLxP1gIx0ROo2wl+PFYGnQAbeUCpkdVLypg+R95N4d/oA==, tarball: file:projects/fetchjson.tgz}
+    name: '@rush-temp/fetchjson'
+    version: 0.0.0
+    dev: false

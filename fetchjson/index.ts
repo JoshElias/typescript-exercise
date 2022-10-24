@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import fetch, { Response } from 'node-fetch'
 
 const url = "https://jsonplaceholder.typicode.com/todos/1";
 

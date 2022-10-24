@@ -6,12 +6,16 @@ interface Todo {
     completed: boolean;
 }
 
+const logTodo = (todo: Todo) => {
+    const { id, title, completed } = todo;
+    console.log(`
+        The Todo with ID: ${id}
+        Has a title of: ${title}
+        Is it finished: ${completed}
+    `);
+}
+
 const url = "https://jsonplaceholder.typicode.com/todos/1";
 const res = await fetch(url);
 const todo: Todo = await res.json() as Todo;
-const { id, title, completed } = todo;
-console.log(`
-    The Todo with ID: ${id}
-    Has a title of: ${title}
-    Is it finished: ${completed}
-`);
+logTodo(todo);

@@ -11,7 +11,7 @@
     "outDir": "dist",
     "moduleResolution": "node"                           /* Skip type checking all .d.ts files. */
   },
-  "files": [
-      "index.ts"
+  "include": [
+      "src/**/*"
   ]
 }

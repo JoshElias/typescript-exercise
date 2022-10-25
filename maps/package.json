@@ -10,5 +10,8 @@
     "build": "tsc -b"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }

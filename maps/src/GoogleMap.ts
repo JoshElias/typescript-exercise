@@ -10,7 +10,7 @@ export interface Mappable {
     markerContent(): string
 }
 
-export class CustomMap {
+export class GoogleMap {
     private googleMap: google.maps.Map;
 
     constructor(el: HTMLElement) {

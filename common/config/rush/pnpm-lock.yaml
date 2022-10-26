@@ -1,12 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@faker-js/faker': ~7.6.0
   '@rush-temp/fetchjson': file:./projects/fetchjson.tgz
   '@rush-temp/maps': file:./projects/maps.tgz
   node-fetch: ~3.2.10
   typescript: ^4.8.4
 
 dependencies:
+  '@faker-js/faker': 7.6.0
   '@rush-temp/fetchjson': file:projects/fetchjson.tgz
   '@rush-temp/maps': file:projects/maps.tgz
   node-fetch: 3.2.10
@@ -17,6 +19,10 @@ packages:
   /@faker-js/faker/7.6.0:
     resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    dev: false
+
+  /@types/google.maps/3.50.4:
+    resolution: {integrity: sha512-edePfF9fo29bFdzcNIAS6rM4KnONY5WiZZaTKASfMLQxjdEysJp+RRkzBc71OIjFXd3bWAjriOL/ek1RloJRng==}
     dev: false
 
   /asynckit/0.4.0:
@@ -135,10 +141,11 @@ packages:
     dev: false
 
   file:projects/maps.tgz:
-    resolution: {integrity: sha512-t26uGEi8PzFtPEfYOSlWT/mddYafOQPmCdZ3BkVDp7FoO9q9d5RIPYfN8opkjgD0oyCKvghjA5rOJ08rdu7QWQ==, tarball: file:projects/maps.tgz}
+    resolution: {integrity: sha512-mzy4yY85nXvCcR7DPyO/CiZfK7/XYiu2IFV38/PWmc1sqSWHk7R2L2N/hFrs8EHB4rO1fnHidmIHB7z6NO+39A==, tarball: file:projects/maps.tgz}
     name: '@rush-temp/maps'
     version: 0.0.0
     dependencies:
       '@faker-js/faker': 7.6.0
+      '@types/google.maps': 3.50.4
       typescript: 4.8.4
     dev: false

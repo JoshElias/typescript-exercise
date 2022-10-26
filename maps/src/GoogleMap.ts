@@ -1,6 +1,13 @@
 /// <reference types="@types/google.maps" />
-import { User } from "./User";
-import { Company } from "./Company";
+
+export interface GPSCoord {
+    lat: number,
+    lng: number
+}
+
+export interface Mappable {
+    location: GPSCoord
+}
 
 export class CustomMap {
     private googleMap: google.maps.Map;
@@ -15,17 +22,10 @@ export class CustomMap {
         });
     }
 
-    addUserMarker(user: User): void {
+    addMarker(v: Mappable): void {
         new google.maps.Marker({
             map: this.googleMap,
-            position: { ...user.location }
-        });
-    }
-
-    addCompanyMarker(company: Company): void {
-        new google.maps.Marker({
-            map: this.googleMap,
-            position: { ...company.location }
+            position: { ...v.location }
         })
     }
 }

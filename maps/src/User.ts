@@ -1,11 +1,9 @@
 import { faker } from "@faker-js/faker";
+import { GPSCoord, Mappable } from "./GoogleMap";
 
-export class User {
+export class User implements Mappable {
     name: string;
-    location: {
-        lat: number;
-        lng: number;
-    }
+    location: GPSCoord;
 
     constructor() {
         this.name = faker.name.fullName();

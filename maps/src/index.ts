@@ -1,4 +1,4 @@
-import { CustomMap } from "./CustomMap";
+import { CustomMap } from "./GoogleMap";
 import { User } from "./User";
 import { Company } from "./Company";
 
@@ -9,6 +9,6 @@ if(!mapEl) {
 const map = new CustomMap(mapEl);
 
 const user1 = new User();
-map.addUserMarker(user1)
+map.addMarker(user1)
 const company1 = new Company();
-map.addCompanyMarker(company1);
+map.addMarker(company1);

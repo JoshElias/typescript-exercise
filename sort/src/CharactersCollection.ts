@@ -1,9 +1,10 @@
-import { Sortable } from "./Sorter";
+import { BaseCollection, Sortable } from "./BaseCollection";
 
-export class CharactersCollection implements Sortable {
+export class CharactersCollection extends BaseCollection implements Sortable {
     private characters: string[];
 
     constructor(v: string) {
+        super()
         this.characters = v.split("");
     }
 

@@ -9,10 +9,6 @@ class Node {
 export class LinkedList implements Sortable{
     head: Node | null = null;
 
-    constructor(public data: number[]) {
-
-    }
-
     get length():number { 
         if(!this.head) return 0;
 
@@ -34,7 +30,7 @@ export class LinkedList implements Sortable{
         let counter = 0;
         let node: Node | null = this.head;
         while(node) {
-            if(counter == i) {
+            if(counter === i) {
                 return node;
             }
 

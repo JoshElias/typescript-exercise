@@ -5,7 +5,9 @@ specifiers:
   '@rush-temp/fetchjson': file:./projects/fetchjson.tgz
   '@rush-temp/maps': file:./projects/maps.tgz
   '@rush-temp/sort': file:./projects/sort.tgz
+  '@rush-temp/stats': file:./projects/stats.tgz
   '@types/google.maps': ~3.50.4
+  concurrently: ~7.5.0
   node-fetch: ~3.2.10
   nodemon: ~2.0.20
   typescript: ^4.8.4
@@ -15,7 +17,9 @@ dependencies:
   '@rush-temp/fetchjson': file:projects/fetchjson.tgz
   '@rush-temp/maps': file:projects/maps.tgz
   '@rush-temp/sort': file:projects/sort.tgz
+  '@rush-temp/stats': file:projects/stats.tgz
   '@types/google.maps': 3.50.4
+  concurrently: 7.5.0
   node-fetch: 3.2.10
   nodemon: 2.0.20
   typescript: 4.8.4
@@ -549,6 +553,15 @@ packages:
   file:projects/sort.tgz:
     resolution: {integrity: sha512-z9M5Qh3VwnoWxUPWRFXzauBQc67VMeiufQsC39yFhRCCMuU5cpNZt8cI/0QI8NgtlkXmPOpBTGkSUZ0niHMmkA==, tarball: file:projects/sort.tgz}
     name: '@rush-temp/sort'
+    version: 0.0.0
+    dependencies:
+      concurrently: 7.5.0
+      nodemon: 2.0.20
+    dev: false
+
+  file:projects/stats.tgz:
+    resolution: {integrity: sha512-xV0+KrFIhTsK4qPfwWZeywn/ELB9rgPIfPquL1yzXV6Rc1O0JHOy+zuQjNQBQoZ1909mVAHXrPLuiJBF/b7u9w==, tarball: file:projects/stats.tgz}
+    name: '@rush-temp/stats'
     version: 0.0.0
     dependencies:
       concurrently: 7.5.0

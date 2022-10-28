@@ -335,6 +335,10 @@
     {
       "packageName": "sort",
       "projectFolder": "sort"
+    },
+    {
+      "packageName": "stats",
+      "projectFolder": "stats"
     }
     // {
     //   /**

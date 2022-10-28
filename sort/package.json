@@ -4,9 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start:run": "nodemon dist/index.js",
+    "start": "concurrently npm:start:*",
     "start:build": "tsc -w",
-    "start": "concurrently npm:start:*"
+    "start:run": "nodemon dist/index.js"
   },
   "author": "",
   "license": "ISC",

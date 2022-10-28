@@ -35,6 +35,10 @@ packages:
     resolution: {integrity: sha512-edePfF9fo29bFdzcNIAS6rM4KnONY5WiZZaTKASfMLQxjdEysJp+RRkzBc71OIjFXd3bWAjriOL/ek1RloJRng==}
     dev: false
 
+  /@types/node/18.11.7:
+    resolution: {integrity: sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==}
+    dev: false
+
   /abbrev/1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: false
@@ -560,10 +564,11 @@ packages:
     dev: false
 
   file:projects/stats.tgz:
-    resolution: {integrity: sha512-xV0+KrFIhTsK4qPfwWZeywn/ELB9rgPIfPquL1yzXV6Rc1O0JHOy+zuQjNQBQoZ1909mVAHXrPLuiJBF/b7u9w==, tarball: file:projects/stats.tgz}
+    resolution: {integrity: sha512-i841FhHYezzNB2DeOnGE7kG9KCJzJKU7cJ26Wkrgwvu/jHPmEdmlXtthQYErDBZwPfnktVUMKW0Ue4J5vjiGkA==, tarball: file:projects/stats.tgz}
     name: '@rush-temp/stats'
     version: 0.0.0
     dependencies:
+      '@types/node': 18.11.7
       concurrently: 7.5.0
       nodemon: 2.0.20
     dev: false

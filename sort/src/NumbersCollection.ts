@@ -1,6 +1,6 @@
 import { BaseCollection, Sortable } from "./BaseCollection";
 
-export class NumbersCollection extends BaseCollection implements Sortable{
+export class NumbersCollection extends BaseCollection {
     constructor(public data: number[]) {
         super();
     }

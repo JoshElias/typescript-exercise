@@ -1,6 +1,6 @@
 import { BaseCollection, Sortable } from "./BaseCollection";
 
-export class CharactersCollection extends BaseCollection implements Sortable {
+export class CharactersCollection extends BaseCollection {
     private characters: string[];
 
     constructor(v: string) {

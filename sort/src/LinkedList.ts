@@ -6,7 +6,7 @@ class Node {
     constructor(public data: number) {}
 }
 
-export class LinkedList extends BaseCollection implements Sortable {
+export class LinkedList extends BaseCollection {
     head: Node | null = null;
 
     get length():number { 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "start:run": "nodemon dist/index.js",
     "start:build": "tsc -w",
@@ -13,5 +14,8 @@
   "dependencies": {
     "nodemon": "~2.0.20",
     "concurrently": "~7.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "~18.11.7"
   }
 }

@@ -1,17 +1,12 @@
-import { readFile } from "fs/promises";
+import { CsvFileReader } from "./CsvFileReader.js";
+import { Match, MatchResult } from "./Match.js";
 
-const matches = await readFile("football.csv", {
-    encoding: 'utf-8'
-});
-
-const manUnitedWins = matches
-    .split('\n')
-    .map(row => row.split(','))
-    .reduce((wins, match) => {
-        return ((match[1] === 'Man United' && match[5] === "H")
-            || (match[2] === 'Man United' && match[5] === "A")) 
-        ? ++wins : wins;
-    }, 0); 
-
+const data = await new CsvFileReader("football.csv").read();
+const matches = data.map(m => new Match(m));
+const manUnitedWins = matches.reduce((wins, match) => {
+    return ((match.homeTeam === "Man United" && match.result === MatchResult.HomeWin)
+        || (match.awayTeam === "Man United" && match.result === MatchResult.AwayWin)) 
+    ? ++wins : wins;
+}, 0); 
 
 console.log(`Manchester United Wins: ${manUnitedWins}`);

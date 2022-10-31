@@ -1,5 +1,9 @@
 import { dateStringToDate } from "./utils.js";
-import { CsvFileReader } from "./CsvFileReader.js";
+
+export interface DataReader {
+    async read(): Promise<string[][]>
+    data: string[][];
+}
 
 export enum MatchResult {
     HomeWin = 'H',
@@ -9,20 +13,30 @@ export enum MatchResult {
 
 export type MatchData = [Date, string, string, number, number, MatchResult, string];
 
-export class MatchReader extends CsvFileReader<MatchData> {
-    mapRow(row: string[]): MatchData {
-        if(!row[0] || !row[1] || !row[2] || !row[3] 
-            || !row[4] || !row[5] || !row[6]) {
-            throw new Error("invalid match data");
+export class MatchReader {
+    matches: MatchData[] = [];
+
+    constructor(public reader: DataReader) {}
+
+    async load(): Promise<MatchData[]> {
+        return this.matches = (await this.reader.read())
+            .map((row :string[]) => {
+                if(!row[0] || !row[1] || !row[2] || !row[3] 
+                    || !row[4] || !row[5] || !row[6]) {
+                    console.log(row);
+                    throw new Error("invalid match data");
+                }
+
+                return [
+                    dateStringToDate(row[0]),
+                    row[1],
+                    row[2],
+                    parseFloat(row[3]),
+                    parseFloat(row[4]),
+                    row[5] as MatchResult,
+                    row[6]
+                ];
+            });
         }
-        return [
-            dateStringToDate(row[0]),
-            row[1],
-            row[2],
-            parseFloat(row[3]),
-            parseFloat(row[4]),
-            row[5] as MatchResult,
-            row[6]
-        ];
-    };   
+    }
 }

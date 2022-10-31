@@ -1,22 +1,17 @@
 import { readFile } from "fs/promises";
+import { DataReader } from "./MatchReader.js";
 
 
-export abstract class CsvFileReader<T> {
-    data: T[] = [];
+export class CsvFileReader implements DataReader {
+    data: string[][] = [];
 
     constructor(public filename: string) {}
 
-    async read(): Promise<T[]> {
-        const matches = await readFile(this.filename, {
+    async read(): Promise<string[][]> {
+        return this.data = (await readFile(this.filename, {
             encoding: "utf-8"
-        });
-        
-        return matches
-            .split('\n')
-            .map(row => row.split(","))
-            .map(this.mapRow)
+        }))
+        .split('\n')
+        .map(row => row.split(','));
     }
-        
-    
-    abstract mapRow(row: string[]): T   
 }

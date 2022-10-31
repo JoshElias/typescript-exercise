@@ -1,7 +1,6 @@
-import { CsvFileReader } from "./CsvFileReader.js";
-import { MatchResult } from "./Match.js";
+import { MatchReader, MatchResult } from "./MatchReader.js";
 
-const matches = await new CsvFileReader("football.csv").read();
+const matches = await new MatchReader("football.csv").read();
 const manUnitedWins = matches.reduce((wins, match) => {
     return ((match[1] === "Man United" && match[5] === MatchResult.HomeWin)
         || (match[2] === "Man United" && match[5] === MatchResult.AwayWin)) 

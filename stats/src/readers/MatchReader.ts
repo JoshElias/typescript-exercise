@@ -1,5 +1,6 @@
 import { dateStringToDate } from "../utils.js";
 import { DataReader } from "./DataReader.js";
+import { CsvFileReader } from "./CsvFileReader.js";
 
 export enum MatchResult {
     HomeWin = 'H',
@@ -10,6 +11,11 @@ export enum MatchResult {
 export type MatchData = [Date, string, string, number, number, MatchResult, string];
 
 export class MatchReader {
+
+    static async fromCsv(filename: string): Promise<MatchReader> {
+        return new MatchReader(new CsvFileReader(filename));
+    }
+
     matches: MatchData[] = [];
 
     constructor(public reader: DataReader) {}

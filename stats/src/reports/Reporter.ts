@@ -1,4 +1,6 @@
 import { MatchData } from "../readers/MatchReader.js";
+import { WinsReport } from "./WinsReport.js";
+import { HtmlTarget } from "../targets/HtmlTarget.js";
 
 export interface ReportSource {
     run(matches: MatchData[]): string
@@ -9,6 +11,13 @@ export interface ReportTarget {
 }
 
 export class Reporter {
+    static winsToHtml(team: string): Reporter {
+        return new Reporter(
+                new WinsReport(team), 
+                new HtmlTarget()
+        );
+    }
+
     constructor(
         public source: ReportSource,
         public target: ReportTarget,

@@ -17,12 +17,12 @@ const manUnitedWinsReport = new ManUnitedWinsReport();
 const reporter = new Reporter(manUnitedWinsReport, consoleTarget);
 reporter.buildAndPrint(matches);
 reporter.target = htmlTarget;
-reporter.buildAndPrint(matches);
+await reporter.buildAndPrint(matches);
 
 const averageGoalsReport = new AverageGoalsReport();
 reporter.source = averageGoalsReport;
 reporter.target = consoleTarget;
-reporter.buildAndPrint(matches);
+await reporter.buildAndPrint(matches);
 
 
 

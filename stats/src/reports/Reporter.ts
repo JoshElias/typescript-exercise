@@ -5,7 +5,7 @@ export interface ReportSource {
 }
 
 export interface ReportTarget {
-    print(report: string): void
+    print(report: string): Promise<void>;
 }
 
 export class Reporter {
@@ -16,8 +16,8 @@ export class Reporter {
 
     }
 
-    buildAndPrint(data: MatchData[]): void {
+    async buildAndPrint(data: MatchData[]): Promise<void> {
         const report = this.source.run(data);
-        this.target.print(report);
+        await this.target.print(report);
     }
 }

@@ -1,7 +1,7 @@
 import { ReportTarget } from "../reports/Reporter.js";
 
 export class ConsoleTarget implements ReportTarget {
-    print(report: string): void {
+    async print(report: string): Promise<void> {
         console.log(`Manchester United Wins: ${report}`);
     }
 }

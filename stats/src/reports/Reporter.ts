@@ -1,4 +1,4 @@
-import { MatchData } from "./MatchReader.js";
+import { MatchData } from "../readers/MatchReader.js";
 
 export interface ReportSource {
     run(matches: MatchData[]): string

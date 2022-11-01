@@ -1,4 +1,4 @@
-import { dateStringToDate } from "./utils.js";
+import { dateStringToDate } from "../utils.js";
 import { DataReader } from "./DataReader.js";
 
 export enum MatchResult {

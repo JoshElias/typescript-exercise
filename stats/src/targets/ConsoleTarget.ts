@@ -1,4 +1,4 @@
-import { ReportTarget } from "./Reporter.js";
+import { ReportTarget } from "../reports/Reporter.js";
 
 export class ConsoleTarget implements ReportTarget {
     print(report: string): void {

@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import { DataReader } from "./MatchReader.js";
+import { DataReader } from "./DataReader.js";
 
 
 export class CsvFileReader implements DataReader {

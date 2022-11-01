@@ -1,9 +1,5 @@
 import { dateStringToDate } from "./utils.js";
-
-export interface DataReader {
-    async read(): Promise<string[][]>
-    data: string[][];
-}
+import { DataReader } from "./DataReader.js";
 
 export enum MatchResult {
     HomeWin = 'H',
@@ -37,6 +33,5 @@ export class MatchReader {
                     row[6]
                 ];
             });
-        }
     }
 }

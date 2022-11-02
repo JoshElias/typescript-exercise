@@ -339,6 +339,10 @@
     {
       "packageName": "stats",
       "projectFolder": "stats"
+    },
+    {
+      "packageName": "web",
+      "projectFolder": "web"
     }
     // {
     //   /**

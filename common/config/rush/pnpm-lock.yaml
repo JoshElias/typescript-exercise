@@ -6,6 +6,7 @@ specifiers:
   '@rush-temp/maps': file:./projects/maps.tgz
   '@rush-temp/sort': file:./projects/sort.tgz
   '@rush-temp/stats': file:./projects/stats.tgz
+  '@rush-temp/web': file:./projects/web.tgz
   '@types/google.maps': ~3.50.4
   '@types/node': ~18.11.7
   concurrently: ~7.5.0
@@ -19,6 +20,7 @@ dependencies:
   '@rush-temp/maps': file:projects/maps.tgz
   '@rush-temp/sort': file:projects/sort.tgz
   '@rush-temp/stats': file:projects/stats.tgz
+  '@rush-temp/web': file:projects/web.tgz
   '@types/google.maps': 3.50.4
   '@types/node': 18.11.7
   concurrently: 7.5.0
@@ -568,6 +570,16 @@ packages:
   file:projects/stats.tgz:
     resolution: {integrity: sha512-i841FhHYezzNB2DeOnGE7kG9KCJzJKU7cJ26Wkrgwvu/jHPmEdmlXtthQYErDBZwPfnktVUMKW0Ue4J5vjiGkA==, tarball: file:projects/stats.tgz}
     name: '@rush-temp/stats'
+    version: 0.0.0
+    dependencies:
+      '@types/node': 18.11.7
+      concurrently: 7.5.0
+      nodemon: 2.0.20
+    dev: false
+
+  file:projects/web.tgz:
+    resolution: {integrity: sha512-NcMIKki6zV5NninNrRJHFRtaOouN9xlLundY4ogoGC6FVRs52vvZv7SXoAD/HSl5A/QObbHHoyL0bwOFOCMqdw==, tarball: file:projects/web.tgz}
+    name: '@rush-temp/web'
     version: 0.0.0
     dependencies:
       '@types/node': 18.11.7
